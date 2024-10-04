@@ -1,0 +1,49 @@
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px black;
+}
+.timer-title {
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.input-container {
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.input-container input {
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px 0 0 5px;
+    font-family: monospace;
+}
+.input-container button {
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 0 5px 5px 0;
+    font-family: monospace;
+    background-color: gray;
+}
+.output-container {
+    padding: 5px;
+    margin: 5px auto;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.output-container p {
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+    color: black;
+    font-family: monospace;
+    font-size: 1.5em;
+}

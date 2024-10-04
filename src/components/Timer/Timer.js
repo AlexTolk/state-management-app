@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import './Timer.css'
 
 function Timer() {
-  const [inputTime, setInputTime] = useState(10); // Set default duration (in seconds)
+  const [inputTime, setInputTime] = useState(10);
   const [remainingTime, setRemainingTime] = useState(inputTime);
-  const [isActive, setIsActive] = useState(false); // To control if the timer is running
+  const [isActive, setIsActive] = useState(false);
 
-  // Function to start the timer
+ 
   const startTimer = () => {
-    setRemainingTime(inputTime); // Set the remaining time to the input value
-    setIsActive(true); // Start the timer
+    setRemainingTime(inputTime);
+    setIsActive(true);
   };
 
   useEffect(() => {
@@ -27,10 +28,9 @@ function Timer() {
   }, [isActive, remainingTime]);
 
   return (
-    <div>
-      <h2>Timer</h2>
-      <div>
-        <label>Set Timer (seconds): </label>
+    <div className='timer-container'>
+      <h2 className='timer-title'>Timer-2000</h2>
+      <div className='input-container'>
         <input
           type="number"
           value={inputTime}
@@ -38,11 +38,12 @@ function Timer() {
           disabled={isActive} // Disable input when timer is active
         />
         <button onClick={startTimer} disabled={isActive}>
-          Start Timer
+          Start
         </button>
       </div>
-      <div>
-        <h3>Time Left: {remainingTime} seconds</h3>
+      <div className='output-container'>
+        <h3>Time Left:</h3>
+        <p> {remainingTime} </p>
       </div>
     </div>
   );
